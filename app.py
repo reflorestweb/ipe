@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, url_for, flash, redirect
 import os, datetime
 import sqlite3
 from flask_sqlalchemy import SQLAlchemy
@@ -20,3 +20,11 @@ class Posts(db.Model):
 @app.route('/')
 def index():
     return render_template('index.html')
+
+@app.route('/cadastro')
+def cadastro():
+    return render_template('Cadastro.html')
+
+@app.route('/dashboard', methods=['POST'])
+def dashboard():
+    return render_template('Dashboard/dashboard.html')

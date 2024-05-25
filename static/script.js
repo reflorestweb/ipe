@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
             alert('Conta criada com sucesso! Você será redirecionado para a página de login.');
 
             // Redireciona o usuário para a página de login após criar a conta
-            window.location.href = '/Login/cadastro/index.html';
+            window.location.href = '/';
         });
     }
 
@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
             // Redireciona o usuário para a página do dashboard após fazer login
-            window.location.href = '/dashboard.html';
+            window.location.href = '/dashboard';
         });
     }
 });

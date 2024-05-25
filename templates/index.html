@@ -13,7 +13,7 @@
     <div class="container"> <!-- Contêiner principal -->
         <div class="form-box"> <!-- Caixa do formulário -->
             <h1>Reflorest</h1> <!-- Título do formulário -->
-            <form id="loginForm" action="/templates" method="POST"> <!-- Formulário de login -->
+            <form id="loginForm" action="{{ url_for('dashboard') }}" method="post"> <!-- Formulário de login -->
                 <div class="inputs"> <!-- Campo de entrada para e-mail -->
                     <i class="fa-solid fa-envelope"></i> <!-- Ícone de e-mail -->
                     <input type="email" name="email" placeholder="Seu Email" required> <!-- Campo de texto para e-mail -->
@@ -23,7 +23,7 @@
                     <input type="password" name="senha" placeholder="Sua senha" required> <!-- Campo de texto para senha -->
                 </div>
                 <div class="botao"> <!-- Botões de ação -->
-                    <a href="/templates/Cadastro.html"> <!-- Link para a página de cadastro -->
+                    <a href="{{ url_for('cadastro') }}"> <!-- Link para a página de cadastro -->
                         <button type="button">Cadastre-se</button> <!-- Botão para redirecionar ao cadastro -->
                     </a>
                     <button type="submit">Entre</button> <!-- Botão para enviar o formulário de login -->
@@ -34,6 +34,6 @@
     <footer class="footer"> <!-- Rodapé da página -->
         <p>&copy; 2024 Reflorest Web. Todos os direitos reservados.</p> <!-- Texto de direitos autorais -->
     </footer>
-    <script src="/Javascript/script.js"></script> <!-- Link para o arquivo JavaScript -->
+    <script src="{{ url_for('static', filename= 'script.js') }}"></script> <!-- Link para o arquivo JavaScript -->
 </body>
 </html>
