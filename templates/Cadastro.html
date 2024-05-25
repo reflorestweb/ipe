@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Reflorest</title> <!-- Título da página -->
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres -->
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/styles.css') }}"> <!-- Link para o arquivo CSS -->
+    <script src="https://kit.fontawesome.com/7204c4bcd9.js" crossorigin="anonymous"></script> <!-- Definição do conjunto de ícones Font Awesome -->
+</head>
+<body>
+    <header class="header"> <!-- Cabeçalho da página -->
+        <h1>Reflorest Web</h1> <!-- Título do cabeçalho -->
+    </header>
+    <div class="container"> <!-- Contêiner principal -->
+        <div class="form-box"> <!-- Caixa do formulário -->
+            <h1>Cadastre-se</h1> <!-- Título do formulário -->
+            <form id="cadastroForm"> <!-- Formulário de cadastro -->
+                <div class="inputs"> <!-- Campo de entrada para nome -->
+                    <i class="fa-solid fa-user"></i> <!-- Ícone de usuário -->
+                    <input type="text" name="nome" placeholder="Seu nome" required> <!-- Campo de texto para nome -->
+                </div>
+                <div class="inputs"> <!-- Campo de entrada para e-mail -->
+                    <i class="fa-solid fa-envelope"></i> <!-- Ícone de e-mail -->
+                    <input type="email" name="email" placeholder="Seu Email" required> <!-- Campo de texto para e-mail -->
+                </div>
+                <div class="inputs"> <!-- Campo de entrada para senha -->
+                    <i class="fa-solid fa-key"></i> <!-- Ícone de senha -->
+                    <input type="password" name="senha" placeholder="Sua senha" required> <!-- Campo de texto para senha -->
+                    <div class="password-hint" id="passwordHintCadastro"> <!-- Dica de senha -->
+                        A senha deve ter pelo menos 8 caracteres, incluindo letras maiúsculas e minúsculas, números e caracteres especiais.
+                    </div>
+                </div>
+                <div class="inputs"> <!-- Campo de entrada para confirmar senha -->
+                    <i class="fa-solid fa-key"></i> <!-- Ícone de senha -->
+                    <input type="password" name="confirmarSenha" placeholder="Confirme sua senha" required> <!-- Campo de texto para confirmar senha -->
+                </div>
+                <div class="botaoc"> <!-- Botão de cadastro -->
+                    <button type="submit">Criar conta</button> <!-- Botão para enviar o formulário -->
+                </div>
+            </form>
+        </div>
+    </div>
+    <footer class="footer"> <!-- Rodapé da página -->
+        <p>&copy; 2024 Reflorest Web. Todos os direitos reservados.</p> <!-- Texto de direitos autorais -->
+    </footer>
+    <script src="/Javascript/script.js"></script> <!-- Link para o arquivo JavaScript -->
+</body>
+</html>

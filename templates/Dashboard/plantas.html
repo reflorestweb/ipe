@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Configuração do documento -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webapp de Reflorestamento</title>
+    <!-- Importando o arquivo CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/plantas.css') }}">
+</head>
+<body>
+    <!-- Cabeçalho da página -->
+    <header class="header">
+        <div class="header-container">
+            <h1>Pedidos</h1>
+            <!-- Navegação -->
+            <nav class="navigation">
+                <ul>
+                    <!-- Links de navegação -->
+                    <li><a href="dashboard.html">Início</a></li>
+                    <li><a href="plantas.html">Plantas</a></li>
+                    <li><a href="historico.html">Histórico</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- Formulário para seleção de plantas -->
+    <div class="form-wrapper">
+        <div class="form-container">
+            <!-- Container para a seleção de plantas -->
+            <div class="select-container">
+                <label for="plantas">Escolha uma planta:</label>
+                <!-- Dropdown para selecionar plantas -->
+                <select id="plantas" class="plantas" multiple>
+                    <!-- Opções de plantas -->
+                <option value="Abiu">Abiu (Pouteria torta) - Sapotaceae</option>
+                <option value="Açoita cavalo">Açoita cavalo (Luehea candicans) - Malvaceae</option>
+                <option value="Açoita cavalo graúdo">Açoita cavalo graúdo (Luehea grandiflora) - Malvaceae</option>
+                <option value="Açoita cavalo miúdo">Açoita cavalo miúdo (Luehea divaricata) - Malvaceae</option>
+                <option value="Amarelinho capitão">Amarelinho capitão (Terminalia brasiliensis) - Combretaceae</option>
+                <option value="Amendoim bravo">Amendoim bravo (Pterogyne nitens) - Fabaceae</option>
+                <option value="Amendoim do campo">Amendoim do campo (Platypodium elegans) - Fabaceae</option>
+                <option value="Angico branco">Angico branco (Anadenanthera colubrina) - Fabaceae</option>
+                <option value="Angico do cerrado">Angico do cerrado (Anadenanthera falcata) - Fabaceae</option>
+                <option value="Angico preto (cascudo)">Angico preto (cascudo) (Anadenanthera macrocarpa) - Fabaceae</option>
+                <option value="Angico vermelho">Angico vermelho (Anadenanthera colubrina var.cebil) - Fabaceae</option>
+                <option value="Araçá amarelo">Araçá amarelo (Psidium cattleianum) - Myrtaceae</option>
+                <option value="Araçá do campo">Araçá do campo (Psidium myrtoides) - Myrtaceae</option>
+                <option value="Araçá roxo">Araçá roxo (Psidium guineense) - Myrtaceae</option>
+                <option value="Araçá vermelho">Araçá vermelho (Psidium longipetiolatum) - Myrtaceae</option>
+                <option value="Araticum amarelo">Araticum amarelo (Annona sylvatica) - Annonaceae</option>
+                <option value="Araticum cagão">Araticum cagão (Annona cacans) - Annonaceae</option>
+                <option value="Aroeira brava">Aroeira brava (Lithraea molleoides) - Anacardiaceae</option>
+                <option value="Aroeira pimenteira">Aroeira pimenteira (Schinus terebinthifolius) - Anacardiaceae</option>
+                <option value="Aroeira verdadeira">Aroeira verdadeira (Myracrodrun urundeuva) - Anacardiaceae</option>
+                <option value="Arranha gato">Arranha gato (Senegalia lowei) - Fabaceae</option>
+                <option value="Baba de boi (babosa branca)">Baba de boi (babosa branca) (Cordia superba) - Boraginaceae</option>
+                <option value="Cabreúva">Cabreúva (Myrocarpus frondosus) - Fabaceae</option>
+                <option value="Cambará">Cambará (Moquiniastrum polymorphum) - Asteraceae</option>
+                <option value="Canafistula">Canafistula (Peltophorum dubium) - Fabaceae</option>
+                <option value="Candeia">Candeia (Gochnatia polymorpha) - Asteraceae</option>
+                <option value="Candiúva (trema/pau pólvora)">Candiúva (trema/pau pólvora) (Trema micrantha) - Cannabaceae</option>
+                <option value="Canela guaiacá">Canela guaiacá (Ocotea puberula) - Lauraceae</option>
+                <option value="Canela sassafrás (canelão)">Canela sassafrás (canelão) (Ocotea odorifera) - Lauraceae</option>
+                <option value="Canelinha">Canelinha (Nectandra megapotamica) - Lauraceae</option>
+                <option value="Capitão do campo">Capitão do campo (Terminalia argentea) - Combretaceae</option>
+                <option value="Capixingui">Capixingui (Croton floribundus) - Euphorbiaceae</option>
+                <option value="Capororoca">Capororoca (Myrsine coriacea) - Primulaceae</option>
+                <option value="Capororoca branca">Capororoca branca (Myrsine guianensis) - Primulaceae</option>
+                <option value="Capororocão">Capororocão (Myrsine umbellata) - Primulaceae</option>
+                <option value="Casca de anta">Casca de anta (Drimys brasiliensis) - Winteraceae</option>
+                <option value="Cebolão">Cebolão (Phytolacca dioica) - Phytolaccaceae</option>
+                <option value="Cedro do brejo">Cedro do brejo (Cedrela odorata) - Meliaceae</option>
+                <option value="Cedro rosa">Cedro rosa (Cedrella fissilis) - Meliaceae</option>
+                <option value="Chal chal">Chal chal (Allophylus edulis) - Sapindaceae</option>
+                <option value="Copaiba">Copaiba (Copaifera langsdorfii) - Fabaceae</option>
+                <option value="Dedaleiro">Dedaleiro (Lafoensia pacari) - Lythraceae</option>
+                <option value="Embaúba">Embaúba (Cecropia pachystachya) - Urticaceae</option>
+                <option value="Embaúba branca">Embaúba branca (Cecropia hololeuca) - Urticaceae</option>
+                <option value="Embira de sapo">Embira de sapo (Dahlstedtia muehlbergiana) - Fabaceae</option>
+                <option value="Embirinha (feijão cru)">Embirinha (feijão cru) (Lonchocarpus cultratus) - Fabaceae</option>
+                <option value="Embaúba vermelha">Embaúba vermelha (Cecropia glaziovii) - Urticaceae</option>
+                <option value="Espeteiro">Espeteiro (Casearia gossypiosperma) - Salicaceae</option>
+                <option value="Falsa jurubeba">Falsa jurubeba (Solanum variabile) - Solanaceae</option>
+                <option value="Farinha seca">Farinha seca (Albizia niopoides) - Fabaceae</option>
+                <option value="Fedegoso">Fedegoso (Senna alata) - Fabaceae</option>
+                <option value="Figueira branca">Figueira branca (Ficus guaranitica) - Moraceae</option>
+                <option value="Figueira mata pau">Figueira mata pau (Ficus dendrocida Kunth) - Moraceae</option>
+                <option value="Figueira preta">Figueira preta (Ficus mixiae) - Moraceae</option>
+                <option value="Fruto de lobo">Fruto de lobo (Solanum lycocarpum) - Solanaceae</option>
+                <option value="Fruto de sabiá">Fruto de sabiá (Acnistus arborescens) - Solanaceae</option>
+                <option value="Fumo bravo">Fumo bravo (Solanum mauritianum) - Solanaceae</option>
+                <option value="Gabiroba">Gabiroba (Campomanesia xanthocarpa) - Myrtaceae</option>
+                <option value="Garapa">Garapa (Apuleia leiocarpa) - Fabaceae</option>
+                <option value="Goiaba">Goiaba (Psidium guajava) - Myrtaceae</option>
+                <option value="Grumixama">Grumixama (Eugenia brasiliensis) - Myrtaceae</option>
+                <option value="Guabiroba amarela">Guabiroba amarela (Campomanesia pubescens) - Myrtaceae</option>
+                <option value="Guaçatonga (cafezinho/erva de lagarto)">Guaçatonga (cafezinho/erva de lagarto) (Casearia sylvestris) - Salicaceae</option>
+                <option value="Guaçatonga Graúda">Guaçatonga Graúda (Casearia lasiophylla) - Salicaceae</option>
+                <option value="Guajuvira">Guajuvira (Cordia americana) - Boraginaceae</option>
+                <option value="Guamirim">Guamirim (Eugenia florida) - Myrtaceae</option>
+                <option value="Guaritá">Guaritá (Astronium graveolens) - Anacardiaceae</option>
+                <option value="Guarucaia">Guarucaia (Parapiptadenia rigida) - Fabaceae</option>
+                <option value="Guatambú">Guatambú (Aspidosperma parvifolium) - Apocynaceae</option>
+                <option value="Ingá de metro">Ingá de metro (Inga edulis) - Fabaceae</option>
+                <option value="Ingá do brejo (Ingá de macaco)">Ingá do brejo (Ingá de macaco) (Inga vera) - Fabaceae</option>
+                <option value="Ingá do rio">Ingá do rio (Inga uruguensis) - Fabaceae</option>
+                <option value="Ingá feijão">Ingá feijão (Inga marginata) - Fabaceae</option>
+                <option value="Ingá liso (Ingá seco/Ingá mirim)">Ingá liso (Ingá seco/Ingá mirim) (Inga laurina) - Fabaceae</option>
+                <option value="Ingá quadrado">Ingá quadrado (Inga striata) - Fabaceae</option>
+                <option value="Ipê amarelo cascudo">Ipê amarelo cascudo (Handroanthus chrysotrichus) - Bignoniaceae</option>
+                <option value="Ipê amarelo da casca lisa">Ipê amarelo da casca lisa (Handroanthus vellosoi) - Bignoniaceae</option>
+                <option value="Ipê amarelo do brejo">Ipê amarelo do brejo (Handroanthus umbellatus) - Bignoniaceae</option>
+                <option value="Ipê bóia (Caroba branca)">Ipê bóia (Caroba branca) (Sparattosperma leucanthum) - Bignoniaceae</option>
+                <option value="Ipê branco">Ipê branco (Tabebuia roseoalba) - Bignoniaceae</option>
+                <option value="Ipê branco do brejo">Ipê branco do brejo (Tabebuia insignis) - Bignoniaceae</option>
+                <option value="Ipê caroba de flor verde">Ipê caroba de flor verde (Cybistax antisyphilitica) - Bignoniaceae</option>
+                <option value="Ipê felpudo">Ipê felpudo (Zeyheria tuberculosa) - Bignoniaceae</option>
+                <option value="Ipê paratudo (ipê amarelo do cerrado)">Ipê paratudo (ipê amarelo do cerrado) (Tabebuia aurea) - Bignoniaceae</option>
+                <option value="Ipê roxo (sete folhas)">Ipê roxo (sete folhas) (Handroanthus heptaphyllus) - Bignoniaceae</option>
+                <option value="Ipê roxo de bola (ipê rosa cinco folhas)">Ipê roxo de bola (ipê rosa cinco folhas) (Handroanthus impetiginosus) - Bignoniaceae</option>
+                <option value="Jabuticaba">Jabuticaba (Plinia peruviana) - Myrtaceae</option>
+                <option value="Jacarandá bico de pato">Jacarandá bico de pato (Marchaerium nyctitans) - Fabaceae</option>
+                <option value="Jacarandá caroba">Jacarandá caroba (Jacaranda cuspidifolia) - Bignoniaceae</option>
+                <option value="Jangada brava (Algodoeiro)">Jangada brava (Algodoeiro) (Heliocarpus popayanensis) - Malvaceae</option>
+                <option value="Jangadeiro (Jangadão)">Jangadeiro (Jangadão) (Heliocarpus americanus) - Malvaceae</option>
+                <option value="Jaracatiá">Jaracatiá (Jacaratia spinosa) - Caricaceae</option>
+                <option value="Jatobá">Jatobá (Hymenaea courbaril) - Fabaceae</option>
+                <option value="Jenipapo">Jenipapo (Genipa americana) - Rubiaceae</option>
+                <option value="Jequitiba branco">Jequitiba branco (Cariniana estrellensis) - Lecythidaceae</option>
+                <option value="jequitibá rosa">jequitibá rosa (Cariniana legalis) - Lecythidaceae</option>
+                <option value="Jerivá">Jerivá (Syagrus romanzoffiana) - Arecaceae</option>
+                <option value="Jurubeba">Jurubeba (Solanum paniculatum) - Solanaceae</option>
+                <option value="Lapacho">Lapacho (Poecilanthe parviflora) - Fabaceae</option>
+                <option value="Leiteiro">Leiteiro (Tabernaemontana hystrix) - Apocynaceae</option>
+                <option value="Lixeira">Lixeira (Aloysia virgata) - Verbenaceae</option>
+                <option value="Louro pardo">Louro pardo (Cordia trichotoma) - Boraginaceae</option>
+                <option value="Macaúba">Macaúba (Acrocomia aculeata) - Arecaceae</option>
+                <option value="Mamoninha">Mamoninha (Mabea fistulifera) - Euphorbiaceae</option>
+                <option value="Manduirana (são joãozinho)">Manduirana (são joãozinho) (Senna macranthera) - Fabaceae</option>
+                <option value="Maria pobre">Maria pobre (Dilodendron bipinnatum) - Sapindaceae</option>
+                <option value="Maria preta">Maria preta (Vitex Polygama) - Lameaceae</option>
+                <option value="Marica de espinho">Marica de espinho (Mimosa bimucronata) - Fabaceae</option>
+                <option value="Marinheiro (Catiguá Morcego)">Marinheiro (Catiguá Morcego) (Guarea macrophylla) - Meliaceae</option>
+                <option value="Marinheiro">Marinheiro (Guarea guidonia) - Meliaceae</option>
+                <option value="Mirindiba">Mirindiba (Buchenavia tetraphylla) - Combretaceae</option>
+                <option value="Mirindiba rosa">Mirindiba rosa (Lafoensia glyptocarpa) - Lythraceae</option>
+                <option value="Monjoleiro">Monjoleiro (Acacia polyphylla) - Fabaceae</option>
+                <option value="Mulungu">Mulungu (Erythrina verna) - Fabaceae</option>
+                <option value="Mutambo">Mutambo (Guazuma ulmifolia) - Malvaceae</option>
+                <option value="Osso de burro">Osso de burro (Helietta apiculata) - Rutaceae</option>
+                <option value="Paineira rosa">Paineira rosa (Ceiba speciosa) - Malvaceae</option>
+                <option value="Pata de vaca">Pata de vaca (Bauhinia forficata) - Fabaceae</option>
+                <option value="Pau angu">Pau angu (Marchaerium hirtum) - Fabaceae</option>
+                <option value="Pau bálsamo">Pau bálsamo (Myroxylon peruiferum) - Fabaceae</option>
+                <option value="Pau cigarra">Pau cigarra (Senna multijuga) - Fabaceae</option>
+                <option value="Pau d'alho">Pau d'alho (Gallesia integrifolia) - Phytolaccaceae</option>
+                <option value="Pau formiga">Pau formiga (Triplaris americana) - Polygonaceae</option>
+                <option value="Pau viola">Pau viola (Cytharexyllum myrianthum) - Verbenaceae</option>
+                <option value="Peito de Pombo">Peito de Pombo (Tapirira guianensis) - Anacardiaceae</option>
+                <option value="Pente de macaco (Pau jangada)">Pente de macaco (Pau jangada) (Apeiba tibourbou) - Malvaceae</option>
+                <option value="Peroba poca">Peroba poca (Aspidosperma cylindrocarpon) - Apocynaceae</option>
+                <option value="Peroba rosa">Peroba rosa (Aspidosperma polyneuron) - Apocynaceae</option>
+                <option value="Pessegueiro">Pessegueiro (Prunus brasiliensis) - Rosaceae</option>
+                <option value="Pessegueiro bravo">Pessegueiro bravo (Prunus myrtifolia) - Rosaceae</option>
+                <option value="Pimenta de macaco">Pimenta de macaco (Xylopia aromatica) - Annonaceae</option>
+                <option value="Pitanga">Pitanga (Eugenia uniflora) - Myrtaceae</option>
+                <option value="Pitanga preta">Pitanga preta (Eugenia sulcata) - Myrtaceae</option>
+                <option value="Pitomba">Pitomba (Talisia esculenta) - Sapindaceae</option>
+                <option value="Quina de SP">Quina de SP (Solanum pseudoquina) - Solanaceae</option>
+                <option value="Ruprechia">Ruprechia (Ruprechtia laxiflora Meisn) - Polygonaceae</option>
+                <option value="Sabão de soldado">Sabão de soldado (Sapindus saponaria) - Sapindaceae</option>
+                <option value="Sangra d`água">Sangra d`água (Crotun urucurana) - Euphorbiaceae</option>
+                <option value="São Joaozinho">São Joaozinho (Senna macranthera) - Leguminosae</option>
+                <option value="Sapuva">Sapuva (Marchaerium stipitatum) - Fabaceae</option>
+                <option value="Sapuvuçu">Sapuvuçu (Dalbergia miscolobium) - Fabaceae</option>
+                <option value="Saraguají amarelo">Saraguají amarelo (Rhamnidium elaeocarpum) - Rhamnaceae</option>
+                <option value="Sobrasil">Sobrasil (Colubrina glandulosa) - Rhamnaceae</option>
+                <option value="Sucupira/ faveiro">Sucupira/ faveiro (Pterodon emarginatus) - Fabaceae</option>
+                <option value="Taiúva">Taiúva (Maclura tinctoria) - Moraceae</option>
+                <option value="Tamanqueiro">Tamanqueiro (Alchornea glandulosa) - Euphorbiaceae</option>
+                <option value="Tamboril">Tamboril (Enterolobium contortisiliquum) - Fabaceae</option>
+                <option value="Timboril">Timboril (Enterolobium maximum) - Fabaceae</option>
+                <option value="Tingui">Tingui (Dicttyoloma vandellianum) - Rutaceae</option>
+                <option value="Uvaia">Uvaia (Eugenia pyriformis) - Myrtaceae</option>
+            </select>
+            <!-- Botão para adicionar ao carrinho -->
+            <button class="adicionar" onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</button>
+        </div>
+        <!-- Container para exibição do carrinho -->
+        <div class="carrinho-container">
+            <h2>Carrinho</h2>
+            <!-- Lista de itens no carrinho -->
+            <ul class="carrinho-list" id="carrinho">
+                <!-- Itens do carrinho aparecerão aqui -->
+            </ul>
+            <!-- Botão para concluir a compra -->
+            <button class="concluir">Concluir Compra</button>
+        </div>
+    </div>
+</div>
+
+ <!-- Rodapé da página -->
+ <footer class="footer">
+    <!-- Texto de direitos autorais -->
+    <p>&copy; 2024 Reflorest Web. Todos os direitos reservados.</p>
+</footer>
+
+<!-- Importando o arquivo JavaScript -->
+<script src="/Javascript/script.js"></script>
+
+</body>
+</html>

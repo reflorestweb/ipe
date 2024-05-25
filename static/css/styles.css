@@ -1,0 +1,128 @@
+/* Importa a fonte Roboto do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap');
+
+/* Define estilos globais para o corpo do documento HTML */
+body {
+    background-image: url(../background.jpg); /* Define a imagem de fundo */
+    background-position: center; /* Centraliza a imagem de fundo */
+    background-repeat: no-repeat; /* Impede a repetição da imagem de fundo */
+    background-attachment: fixed; /* Fixa a imagem de fundo durante a rolagem */
+    background-size: cover; /* Ajusta a imagem de fundo para cobrir toda a tela */
+    font-family: 'Roboto', sans-serif; /* Define a fonte principal */
+    margin: 0; /* Remove margens padrão */
+    display: flex; /* Estabelece um layout flexível */
+    min-height: 100vh; /* Define a altura mínima como a altura da viewport */
+    flex-direction: column; /* Orienta os itens em coluna */
+    overflow-x: hidden; /* Esconde a barra de rolagem horizontal */
+}
+
+
+/* Define estilos para o cabeçalho */
+.header {
+    background-color: #81C784; /* Define a cor de fundo do cabeçalho */
+    color: white; /* Define a cor do texto */
+    padding: 10px 20px; /* Adiciona preenchimento interno */
+    text-align: center; /* Centraliza o texto */
+    height: 60px; /* Define a altura do cabeçalho */
+}
+
+/* Define estilos para o contêiner principal */
+.container {
+    display: flex; /* Estabelece um layout flexível */
+    justify-content: center; /* Centraliza horizontalmente os itens */
+    align-items: center; /* Centraliza verticalmente os itens */
+    flex: 1; /* Expande para preencher o espaço disponível */
+}
+
+/* Define estilos para a caixa do formulário */
+.form-box {
+    width: 90%; /* Define a largura da caixa do formulário */
+    max-width: 450px; /* Define a largura máxima da caixa do formulário */
+    background: rgba(255, 255, 255, 0.7); /* Define a cor de fundo com opacidade */
+    padding: 50px 60px 70px; /* Adiciona preenchimento interno */
+    text-align: center; /* Centraliza o texto */
+    border-radius: 20px; /* Adiciona bordas arredondadas */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+    transition: all 0.3s ease; /* Adiciona transição suave */
+}
+
+/* Define estilos para o título do formulário */
+.form-box h1 {
+    font-size: 30px; /* Define o tamanho da fonte */
+    margin-bottom: 40px; /* Adiciona margem inferior */
+    color: #4CAF50; /* Define a cor do texto */
+    position: relative; /* Define o posicionamento relativo */
+}
+
+/* Adiciona uma linha decorativa abaixo do título */
+.form-box h1::after {
+    content: ""; /* Conteúdo vazio */
+    width: 30px; /* Define a largura da linha */
+    height: 4px; /* Define a altura da linha */
+    border-radius: 3px; /* Adiciona bordas arredondadas */
+    background: #4CAF50; /* Define a cor da linha */
+    position: absolute; /* Define o posicionamento absoluto */
+    bottom: -12px; /* Posiciona a linha abaixo do título */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Centraliza a linha */
+}
+
+/* Define estilos para os campos de entrada */
+.inputs {
+    background: #f0f0f0; /* Define a cor de fundo */
+    margin: 15px 0; /* Adiciona margem vertical */
+    border-radius: 5px; /* Adiciona bordas arredondadas */
+    display: flex; /* Estabelece um layout flexível */
+    align-items: center; /* Centraliza verticalmente os itens */
+    padding: 10px; /* Adiciona preenchimento interno */
+}
+
+/* Define estilos para os ícones dentro dos campos de entrada */
+.inputs i {
+    margin-left: 10px; /* Adiciona margem à esquerda */
+    color: #666; /* Define a cor do ícone */
+}
+
+/* Define estilos para os campos de entrada de texto */
+.inputs input {
+    width: 100%; /* Define a largura total */
+    background: transparent; /* Define fundo transparente */
+    border: 0; /* Remove bordas */
+    outline: 0; /* Remove contorno */
+    padding: 10px; /* Adiciona preenchimento interno */
+}
+
+/* Define estilos para o contêiner dos botões */
+.botao, .botaoc {
+    display: flex; /* Estabelece um layout flexível */
+    justify-content: space-around; /* Distribui igualmente os itens */
+    margin-top: 20px; /* Adiciona margem superior */
+}
+
+/* Define estilos para os botões */
+.botao button, .botaoc button {
+    background: #4CAF50; /* Define a cor de fundo */
+    color: white; /* Define a cor do texto */
+    border: none; /* Remove bordas */
+    border-radius: 20px; /* Adiciona bordas arredondadas */
+    padding: 10px 20px; /* Adiciona preenchimento interno */
+    cursor: pointer; /* Define o cursor como ponteiro */
+    transition: background 0.3s ease; /* Adiciona transição suave */
+}
+
+/* Adiciona estilos ao passar o mouse sobre os botões */
+.botao button:hover, .botaoc button:hover {
+    background: #45a049; /* Muda a cor de fundo */
+}
+
+/* Define estilos para o rodapé */
+.footer {
+    background-color: #81C784; /* Define a cor de fundo */
+    color: white; /* Define a cor do texto */
+    text-align: center; /* Centraliza o texto */
+    padding: 10px; /* Adiciona preenchimento interno */
+    position: relative; /* Define posicionamento relativo */
+    bottom: 0; /* Posiciona na parte inferior */
+    width: 100%; /* Define a largura total */
+    height: 40px; /* Define a altura do rodapé */
+}
