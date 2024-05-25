@@ -25,6 +25,14 @@ def index():
 def cadastro():
     return render_template('Cadastro.html')
 
-@app.route('/dashboard', methods=['POST'])
+@app.route('/dashboard')
 def dashboard():
     return render_template('Dashboard/dashboard.html')
+
+@app.route('/historico')
+def historico():
+    return render_template('Dashboard/historico.html')
+
+@app.route('/plantas')
+def plantas():
+    return render_template('Dashboard/plantas.html')

@@ -12,14 +12,14 @@
     <!-- Cabeçalho da página -->
     <header class="header">
         <div class="header-container">
-            <h1>Pedidos</h1>
+            <h1>Formulário Viveiro</h1>
             <!-- Navegação -->
             <nav class="navigation">
                 <ul>
                     <!-- Links de navegação -->
-                    <li><a href="dashboard.html">Início</a></li>
-                    <li><a href="plantas.html">Plantas</a></li>
-                    <li><a href="historico.html">Histórico</a></li>
+                    <li><a href="{{ url_for('dashboard') }}">Início</a></li>
+                    <li><a href="{{ url_for('plantas') }}">Plantas</a></li>
+                    <li><a href="{{ url_for('historico') }}">Histórico</a></li>
                 </ul>
             </nav>
         </div>
@@ -185,17 +185,17 @@
                 <option value="Uvaia">Uvaia (Eugenia pyriformis) - Myrtaceae</option>
             </select>
             <!-- Botão para adicionar ao carrinho -->
-            <button class="adicionar" onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</button>
+            <button class="adicionar" onclick="adicionarAoCarrinho()">Adicionar ao Formulário</button>
         </div>
         <!-- Container para exibição do carrinho -->
         <div class="carrinho-container">
-            <h2>Carrinho</h2>
+            <h2>Plantas Selecionadas</h2>
             <!-- Lista de itens no carrinho -->
             <ul class="carrinho-list" id="carrinho">
                 <!-- Itens do carrinho aparecerão aqui -->
             </ul>
             <!-- Botão para concluir a compra -->
-            <button class="concluir">Concluir Compra</button>
+            <button class="concluir">Concluir Formulário e Enviar</button>
         </div>
     </div>
 </div>

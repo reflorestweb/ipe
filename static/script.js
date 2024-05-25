@@ -81,7 +81,6 @@ document.addEventListener('DOMContentLoaded', function() {
     if (loginForm) {
         const senhaInputLogin = loginForm.querySelector('input[type="password"]');
         const passwordHintLogin = document.querySelector('#passwordHintLogin');
-        mostrarDicaSenha(senhaInputLogin, passwordHintLogin);
 
         loginForm.addEventListener('submit', function(event) {
             event.preventDefault();
@@ -91,10 +90,10 @@ document.addEventListener('DOMContentLoaded', function() {
             const senhaInput = loginForm.querySelector('input[type="password"]');
 
             // Validação dos campos do formulário
-            if (nomeInput.value.trim() === '') {
-                alert('Por favor, insira seu nome.');
-                return;
-            }
+            // if (nomeInput.value.trim() === '') {
+            //     alert('Por favor, insira seu nome.');
+            //     return;
+            // }
 
             if (emailInput.value.trim() === '') {
                 alert('Por favor, insira seu email.');
